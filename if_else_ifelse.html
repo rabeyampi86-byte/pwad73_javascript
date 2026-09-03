@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show{
+            font-size: 50px;
+            color: rgb(11, 41, 105);
+        }
+    </style>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        let score =  window.prompt( "Insert a number", "");
+     score = parseInt(score);
+    
+        if(score>=80){
+            document.getElementById("show").innerHTML = "A+";
+        } else if(score>=60){
+            document.getElementById("show").innerHTML = "A";
+        } else if(score>=50){
+            document.getElementById("show").innerHTML = "A-";
+        } else if(score>=40){
+            document.getElementById("show").innerHTML = "B-";
+        } else if(score>=30){
+            document.getElementById("show").innerHTML = "Pass";
+        } else if(score<=30){
+            document.getElementById("show").innerHTML = "F";
+        }
+    </script>
+</body>
+</html>

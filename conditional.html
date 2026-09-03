@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        let a = window.prompt("Insert a number", "");
+        let b = window.prompt("Insert another number", "");
+        a = parseInt(a);
+        b = parseInt(b);
+        let c = a + b;
+        let d = a+b+c;
+        if(d>=200){
+        document.getElementById("show").innerHTML = "The result is ok"
+        }else{
+            document.getElementById("show").innerHTML = "The result is low"
+        }
+
+    </script>
+</body>
+</html>
