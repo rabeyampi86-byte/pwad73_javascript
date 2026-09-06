@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function oddOrEven(){
+        let number = window.prompt("Enter a number");
+        number = parseInt(number);
+        if(number % 2 === 0){
+            alert("The number " + number + " is Even.")
+        }else{
+            alert("The number " + number + " is Odd.")
+        }
+    } 
+
+    </script>
+</head>
+<body>
+    <button onclick="oddOrEven()">Check if the number is Odd or Even</button>
+</body>
+</html>
