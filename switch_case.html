@@ -7,22 +7,35 @@
 </head>
 <body>
     <script>
-        let mpi = prompt("enter your number");
-        switch(mpi){
-            case "1":
-            document.write("True");
+        // let mpi = prompt("Bangladesh is a small country");
+        // switch(mpi){
+        //     case "1":
+        //     document.write("True");
+        //     break;
+        //     case "2":
+        //     document.write("Yes");
+        //     break;
+        //     case "3":
+        //     document.write("False");
+        //     break;
+        //     case "4":
+        //     document.write("No");
+        //     break;
+        //     default:
+        //         document.write("Not Given");
+        // }
+    </script>
+    <script>
+        let score = Number(prompt("Enter the number"));
+        switch(true) {
+            case score >= 80:
+            alert("A+");
             break;
-            case "2":
-            document.write("Yes");
-            break;
-            case "3":
-            document.write("False");
-            break;
-            case "4":
-            document.write("No");
+            case score >= 60:
+            alert("A");
             break;
             default:
-                document.write("Not Given");
+            alert("Fail");
         }
     </script>
 </body>

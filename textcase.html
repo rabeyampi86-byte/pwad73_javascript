@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let msg = "Hello, This is JavaScript class number 26";
+        // document.write(msg.toLowerCase());
+        // document.write("<br>");
+        // document.write(msg.toUpperCase());
+
+        // var airFlock="";
+        // var airplane = new Array("Cessna","Piper","Maule","Mooney","Boeing");
+        // for (var counter in airplane) {
+        // airFlock += airplane[counter] + "<br>";
+        // }
+        // document.write(airFlock)
+    </script>
+    <script>
+        // chapter-5, page-83/84
+        var complete="You are missing the @ character in your email address.";
+        var emailAd = prompt("Enter your email address","");
+        for (var counter in emailAd) {
+           if (emailAd[counter]=="@") {
+            complete="You included your @ character.";
+            }
+        }
+        document.write(complete)
+    </script>
+</body>
+</html>
