@@ -17,7 +17,25 @@
            let email = document.myform.email.value;
            let password = document.myform.password.value;
            let valid = false;
-           email.match()
+           //let valid = false;
+           if(email.search(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/) == -1){
+            alert("Invalid Email Address");
+            valid = false;
+            return false;
+           }else{
+            valid = true;
+           }
+
+           if(password.search(/^[a-zA-Z0-9]{4,8}$/) == -1){
+            alert("Invalid password");
+            valid = false;
+            return false;
+           }else{
+            valid = true;
+           }
+           if(valid = true){
+            alert("All are valid");
+           }
         }
     </script>
 </body>
