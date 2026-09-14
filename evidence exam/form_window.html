@@ -16,8 +16,26 @@
         <input type="text" name="name" placeholder="Enter name"><br>
         <textarea name="address" placeholder="Enter address"></textarea><br>
         <input type="email" name="email" placeholder="Enter email"><br>
-        <input type="button" onclick="mywindow()" name="submit" value="SUBMIT">
-        <input type="button" onclick="mywindow.close()" name="close" value="Closw">
+        <label for="">Gender:</label><br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
+        <label for="">District:</label><br>
+        <select name="district">
+            <option selected disabled value="">Select one</option>
+            <option>Dhaka</option>
+            <option>Cumilla</option>
+            <option>Brahmanbaria</option>
+            <option>Cox's Bazar</option>
+            <option>Chattagram</option>
+            <option>Feni</option>
+        </select> <br> 
+        <label for="">Hobbies:</label><br>
+        <input type="checkbox" class="hobbies" value="Gardening">Gardening
+        <input type="checkbox" class="hobbies" value="Reading">Reading
+        <input type="checkbox" class="hobbies" value="Swing">Swing
+        <input type="checkbox" class="hobbies" value="Playing">Playing <br>
+        <input type="button" onclick="mywindow()" name="open" value="Open">
+        <input type="button" onclick="mywindow.close()" name="close" value="Close">
     </form>
     <div id="show"></div>
     <script>
@@ -25,13 +43,26 @@
             let name = document.myform.name.value;
             let address = document.myform.address.value;
             let email = document.myform.email.value;
-            let output = "<div class='blue'>";
-            output += name + "<br>";
-            output += address + "<br>";
-            output += email + "<br>";
+            let gender = document.myform.gender.value;
+            let district = document.myform.district.value;
+            let hobbiesOutput = "";
+            let hobbies = document.getElementsByClassName("hobbies");
+            for(let i = 0; i<hobbies.length; i++){
+                if(hobbies[i].checked){
+                    hobbiesOutput += hobbies[i].value + ", ";
+                }
+            }
+            //console.log(hobbies);
+            let output = "<div style='background-color:green'>";
+            output += "Name: " + name + "<br>";
+            output += "Address: " + address + "<br>";
+            output += "E-mail: " + email + "<br>";
+            output += "Gender: " + gender + "<br>";
+            output += "District: " + district + "<br>";
+            output += "Hobbies: " + hobbiesOutput + "<br>";
             output += "</div>";
            // document.getElementById("show").innerHTML = output;
-           mywindow = window.open("", "", "height=300px, width=400px");
+           mywindow = window.open("", "", "height=400px, width=500px");
            mywindow.document.write(output);
         }
     </script>
