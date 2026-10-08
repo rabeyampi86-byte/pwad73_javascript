@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+.blackPatch {
+background-color:000000
+}
+</style>
+  <title>Document</title>
+<script language="Javascript">
+function checkIt( ) {
+var verify=document.pass.word.value;
+if (verify=="JavaScript") {
+alert("You may pass.")
+} else {
+alert("Sorry Jack, you\'re out of luck.")
+}
+}
+</script>
+</head>
+<body>
+    <h3>Please enter your password and then
+<br> click on the page out of the text box:</h3>
+<div class=blackPatch>
+<form name="pass">
+some space <input type=password name="word"
+onBlur="checkIt( );"> more space
+</form>
+</div>
+</body>
+</html>
