@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter the value of a");
+        let b = prompt("Enter the value of b");
+        let c = prompt("Enter the value of c");
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+        if(a>b && a>c){
+            var max = a;
+        } else if(b>a && b>c){
+            var max = b;
+        } else{
+            var max = c;
+        }
+        document.write("The maximum number is " + max + "<br>");
+    </script>
+</body>
+</html>
