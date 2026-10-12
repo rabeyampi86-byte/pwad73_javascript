@@ -11,12 +11,12 @@
     <label for="">Name:</label><br>
     <input type="text" name="name" placeholder="Enter your name"><br>
     <label for="">Contact:</label><br>
-    <input type="number" name="number" placeholder="Enter your number"><br>
+    <input type="number" name="contact" placeholder="Enter your number"><br>
     <label for="">Remarks:</label><br>
     <textarea name="remarks"></textarea><br>
     <label for="">Sex:</label><br>
-    <input type="radio" name="sex" value="m">Male
-    <input type="radio" name="sex" value="f">Female <br>
+    <input type="radio" name="sex" value="Male">Male
+    <input type="radio" name="sex" value="Female">Female <br>
     <label for="">Courses:</label><br>
     <input type="checkbox" class="courses" value="NT">NT
     <input type="checkbox" class="courses" value="IAD">IAD
@@ -29,24 +29,43 @@
         <option>Dhanmondi</option>
         <option>Mirpur</option>
     </select> <br> <br>
-    <button type="button" onclick="myfunction()">Submit</button>
+    <button type="button" onclick="mywindow()">Submit</button>
     </form>
     <script>
-        function myfunction(){
-            //alert("Hello");
+        function mywindow(){
             let name = document.myform.name.value;
             let contact = document.myform.contact.value;
             let remarks = document.myform.remarks.value;
             let sex = document.myform.sex.value;
             let location = document.myform.location.value;
-            //let name = document.myform.name.value;
-            //alert(name);
+            let courseOutput = "";
+            const courses = document.getElementsByClassName("courses");
+            for(let i = 0; i<courses.length; i++){
+                if(courses[i].checked){
+                    courseOutput += courses[i].value + ", ";
+                }
+            }
             let output = "";
             output += "Name: " + name + "<br>";
-            let mywind = window.open("", "", "height:300, width:300");
-            mywind.document.write(output);
+            output += "Contact: " + contact + "<br>";
+            output += "Remarks: " + remarks + "<br>";
+            output += "Sex: " + sex + "<br>";
+            output += "Location: " + location + "<br>";
+            output += " Courses: " + courseOutput + "<br>";
+            mywindow = window.open("", "", "height:300px, width:400px");
+            mywindow.document.write(output);
        }
        // document.getElementById("show").innerHTML = name;
+    </script>
+    <script>
+        // Factorial:
+        // let mynum = prompt("Enter a number", "");
+        // mynum = parseInt(mynum);
+        // let output = 1;
+        // for(let i = 1; i<=mynum; i++){
+        //     output *= i;
+        // }
+        // document.write("The factorial value of " + mynum + " is " + output);
     </script>
 </body>
 </html>
